@@ -12,7 +12,7 @@
   # This sample publishes the directory located at the absolute 
   # path "root/project/build-output"
 
-  publish = "src/pages/"
+  publish = "dist/"
 
   # Default build command.
   command = "npm run build"
@@ -27,8 +27,8 @@
 # here but we recommend using the Netlify UI for sensitive
 # values to keep them out of your source repository.
 [context.production]
-  publish = "output/"
-  command = "make publish"
+  publish = "dist"
+  command = ""npm run build""
   environment = { NODE_VERSION = "14.15.3" }
 
 # Deploy Preview context: all deploys generated from
@@ -158,7 +158,7 @@
 # for environment variables. Environment variables for Netlify
 # Dev should be set under [context.dev.environment] instead.
 [dev]
-  command = "yarn start"
+  command = "npm run build"
   port = 8888
   publish = "dist"
 
