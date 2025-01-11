@@ -28,13 +28,13 @@
 # values to keep them out of your source repository.
 [context.production]
   publish = "dist"
-  command = ""npm run build""
+  command = "npm run build"
   environment = { NODE_VERSION = "14.15.3" }
 
 # Deploy Preview context: all deploys generated from
 # a pull/merge request will inherit these settings.
 [context.deploy-preview]
-  publish = "dist/"
+  publish = "tutorial/dist/"
 
 # Here is an example of how to define context-specific
 # environment variables. To avoid committing sensitive
